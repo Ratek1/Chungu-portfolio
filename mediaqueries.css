@@ -1,0 +1,140 @@
+/* mediaqueries.css */
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+  
+  /* Top Greeting Banner */
+  .top-greeting-banner {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  #greetingText {
+    font-size: 1rem;
+  }
+  
+  .social-links a {
+    margin-left: 10px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 12px 0;
+    top: 50px;
+  }
+  
+  .nav-container {
+    padding: 0 16px;
+  }
+  
+  /* Hide nav links and show hamburger */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Logo smaller on mobile */
+  .logo {
+    font-size: 1.6rem;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 2rem 1rem;
+    margin-top: 100px;
+  }
+  
+  .hero-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .section__pic-container img {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .section__text__p1 {
+    font-size: 1.1rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.2rem;
+  }
+  
+  /* Buttons smaller */
+  .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* About Section */
+  #about {
+    padding: 3rem 1rem;
+  }
+  
+  .section-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-pic {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .about-details-container {
+    min-width: auto;
+  }
+  
+  /* Experience, Portfolio, Testimonials grids stack */
+  .experience-grid,
+  .project-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Flip cards smaller height */
+  .flip-card {
+    height: 280px;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 3rem 1rem;
+  }
+  
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Footer adjustments */
+  footer {
+    padding: 2rem 1rem;
+  }
+}

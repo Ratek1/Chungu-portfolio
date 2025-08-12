@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Chungu Glancy, Frontend Developer specializing in React, JavaScript, and modern web design." />
+    <title>Chungu Glancy | Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <!-- Top Greeting Banner -->
+    <div class="top-greeting-banner" id="greetingBanner">
+        <p id="greetingText" role="status"></p>
+        <div class="social-links">
+            <a href="tel:+260777738064" aria-label="Call Chungu Glancy">
+                <img src="./assets/call.png" alt="Call icon" width="24" height="24" loading="lazy">
+            </a>
+            <a href="https://wa.me/260777738064" aria-label="WhatsApp chat with Chungu Glancy">
+                <img src="./assets/whatsapp-icon.svg" alt="WhatsApp icon" width="24" height="24" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com/in/chungu-glancy-49117b2a8/" aria-label="Chungu Glancy's LinkedIn profile">
+                <img src="./assets/linkedin.svg" alt="LinkedIn icon" width="24" height="24" loading="lazy">
+            </a>
+            <a href="https://facebook.com/yourprofile" aria-label="Chungu Glancy's Facebook profile">
+                <img src="./assets/Facebook-icon.svg" alt="Facebook icon" width="24" height="24" loading="lazy">
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="desktop-nav" role="navigation">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Chungu Glancy Portfolio Home">Chungu Glancy</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="connect-btn">Let's Connect</a></li>
+            </ul>
+            <div class="hamburger-menu" role="button" aria-label="Toggle navigation menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="profile">
+        <div class="hero-container">
+           <div class="section__pic-container flip-container">
+  <div class="flipper">
+    <img src="./assets/profile-pic-new.png" alt="Chungu Glancy profile picture" loading="lazy" class="front oval-image" />
+    <img src="./assets/backphoto.png" alt="Back side image" loading="lazy" class="back oval-image" />
+  </div>
+</div>
+
+            <div class="section__text">
+                <p class="section__text__p1">Hey, I'm</p>
+                <h1 class="title">Chungu Glancy</h1>
+                <p class="section__text__p2">
+                    <span id="changing-text">Frontend Developer</span>
+                </p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+                        Download CV
+                    </button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <div id="socials-container">
+                   <img src="./assets/linkedin.svg" alt="Chungu Glancy's LinkedIn profile" class="icon linkedin-icon" 
+                   onclick="window.open('https://linkedin.com/in/chungu-glancy-49117b2a8/', '_blank')" loading="lazy">
+
+                  <img src="./assets/github.png" alt="Chungu Glancy's Github profile" class="icon" 
+                    onclick="window.open('https://github.com/Ratek1', '_blank')" loading="lazy">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/backphoto.png" alt="Frontend Development Project" class="about-pic" loading="lazy" />
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.svg" alt="Experience icon" class="icon" loading="lazy">
+                        <h3>Experience</h3>
+                        <p>2+ years <br>Frontend Development</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.svg" alt="Education icon" class="icon" loading="lazy">
+                        <h3>Education</h3>
+                        <p>B.Sc. Bachelors Degree in ICT<br>Cert in computer studies<br>Cert in Graphic design</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        Passionate about creating seamless and engaging web experiences, I specialize in full stack web development with a keen eye for design and usability. With over two years of experience, I blend technical expertise with creativity to deliver responsive and accessible websites. My background in ICT and graphic design allows me to craft visually appealing interfaces that enhance user interaction .
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow to experience section" class="icon arrow" onclick="location.href='./#experience'" loading="lazy">
+    </section>
+
+    <!-- Experience Section with Flipping Cards -->
+    <section id="experience">
+        <p class="section__text__p1">Flip to explore my</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-grid">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/f1.jpg" alt="Frontend Development Project" loading="lazy"/>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Frontend Development</h3>
+                        <ul>
+                            <li>HTML: Experienced</li>
+                            <li>CSS: Intermediate</li>
+                            <li>jQuery: Intermediate</li>
+                            <li>JavaScript: Basic</li>
+                            <li>Bootstrap: Basic</li>
+                            <li>Material UI: Intermediate</li>
+                            <li>Wordpress and elementor: Experienced</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/graphic-design.jpg" alt="Backend Development Project" loading="lazy" />
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Backend Development</h3>
+                        <ul>
+                            <li>Postman: Basic</li>
+                            <li>Node JS: Intermediate</li>
+                            <li>Express JS: Intermediate</li>
+                            <li>MongoDB: Intermediate</li>
+                            <li>Git: Intermediate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/fpt.jpg" alt="Graphic design services" loading="lazy" />
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Graphic Design</h3>
+                        <ul>
+                            <li>Adobe Photoshop: Intermediate</li>
+                            <li>Adobe Illustrator: Basic</li>
+                            <li>photo light: Basic</li>
+                            <li>Adobe XD: Basic</li>
+                            <li>Figma: Intermediate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow to projects section" class="icon arrow" onclick="location.href='./#projects'" loading="lazy">
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Portfolio</h1>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="./assets/wordpress.jpeg" alt="Backend Development Project" loading="lazy" />
+                <h2 class="project-title">Wordpress Websites</h2>
+                <p>Responsive e-commerce websites, Portifolios, Student management systems, Booking systems, Restaurant websites etc, featuring dynamic product filtering and a modern UI.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Ratek1', '_blank')">Explore</button>
+
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./assets/Crafting Seamless Sign-Ups_ UI Design Mobile  Experience.jpeg" alt="Backend Development Project" loading="lazy" />
+                <h2 class="project-title">Task Management App</h2>
+                <p>A Node.js-based task management application with Express.js backend and Material UI for a sleek frontend experience.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Ratek1', '_blank')">Explore</button>
+
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./assets/Professional Web Design for Modern Brands.jpeg" alt="Backend Development Project" loading="lazy" />
+                <h2 class="project-title">Portfolio Website</h2>
+                <p>A personal portfolio website showcasing my skills and projects, built with a focus on accessibility and performance.</p>
+                <div class="btn-container">
+                   <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">Github</button>
+                   <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Ratek1', '_blank')">Explore</button>
+
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow to testimonials section" class="icon arrow" onclick="location.href='./#testimonials'" loading="lazy">
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <p class="section__text__p1">What Others Say</p>
+        <h1 class="title">Testimonials</h1>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy">
+                <p>"Chungu's work on our website was exceptional. The design was modern, responsive, and user-friendly!"</p>
+                <h3>Violet, CEO</h3>
+            </div>
+            <div class="testimonial-card">
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy">
+                <p>"A fantastic developer with a keen eye for detail. Delivered our project on time with great quality."</p>
+                <h3>Nam, Project Manager</h3>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow to contact section" class="icon arrow" onclick="location.href='./#contact'" loading="lazy">
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" loading="lazy">
+                <p><a href="mailto:glancechungu@gmail.com" target="_blank">glancechungu@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" loading="lazy">
+                <p><a href="https://www.linkedin.com/in/chungu-glancy-49117b2a8/" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &copy; 2025 Chungu Glancy. All Rights Reserved.</p>
+    </footer>
+
+ <div id="backToTopContainer">
+  <img src="./assets/up-arro.svg" alt="Back to top" id="backToTop" title="Back to top" />
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
