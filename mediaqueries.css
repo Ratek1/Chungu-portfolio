@@ -1,79 +1,41 @@
 /* Mobile: max-width 600px */
 @media (max-width: 600px) {
 
-  /*Top Greeting Banner */
+  /* Top Greeting Banner */
   .top-greeting-banner {
     padding: 12px 16px;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
-  #greetingText { font-size: 1rem;
-   }
-  
-  .social-links a { margin-left: 10px;
-   }
+  #greetingText { font-size: 1rem; }
+  .social-links a { margin-left: 10px; }
 
-  /* ---------- Navbar ---------- */
-  .navbar { 
-    padding: 12px 0; 
-    top: 50px; 
-  }
+  /* Navbar */
+  .navbar { padding: 12px 0; top: 50px; }
+  .nav-container { padding: 0 16px; }
+  .nav-links { display: none; flex-direction: column; gap: 1.5rem; }
+  .nav-links.active { display: flex; }
+  .hamburger-menu { display: block; }
+  .logo { font-size: 1.6rem; }
 
-  .nav-container { 
-    padding: 0 16px;
-   }
-
-  .nav-links { 
-    display: none; 
-    flex-direction: column;
-     gap: 1.5rem; 
-    }
-
-  .nav-links.active { 
-    display: flex;
-   }
-
-  .hamburger-menu { 
-    display: block; 
-  }
-
-  .logo { 
-    font-size: 1.6rem;
-   }
-  /*Mobile: max-width 600px */
-@media (max-width: 600px) {
-  /* existing mobile styles... */
-
-  /* Hide logo and connect button when menu is open */
+  /* Hide logo/connect when menu is open */
   .nav-container.menu-open .logo,
   .nav-container.menu-open .connect-btn {
-      display: none;
-  }
-}
-
-
-  /* When nav-links (hamburger menu) is active, hide logo and connect button */
-.nav-links.active ~ .logo,
-.nav-links.active ~ .connect-btn {
- display: none;
-}
-
-  /* Hero Section */
-  .hero { 
-    padding: 2rem 1rem; 
-    margin-top: 100px; 
+    display: none;
   }
 
-  .hero-container { 
-    flex-direction: column; 
-    gap: 8vw;
-     width: 90vw;
-      justify-content: center; 
-    }
+  /* Hide logo/connect when nav-links active */
+  .nav-links.active ~ .logo,
+  .nav-links.active ~ .connect-btn {
+    display: none;
+  }
+
+  /* Hero */
+  .hero { padding: 2rem 1rem; margin-top: 100px; }
+  .hero-container { flex-direction: column; gap: 8vw; width: 90vw; justify-content: center; }
   .section__pic-container {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
   }
@@ -81,111 +43,74 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%; 
+    border-radius: 50%;
     display: block;
     margin: 0 auto;
-}
-
-
-  .title { font-size: 10vw; 
-    line-height: 1.1; 
-    text-align: center; 
   }
-  .section__text__p1 { 
-    font-size: 4vw; 
-    text-align: center;
-   }
+  .title { font-size: 10vw; line-height: 1.1; text-align: center; }
+  .section__text__p1 { font-size: 4vw; text-align: center; }
+  .section__text__p2 { font-size: 5vw; text-align: center; }
+  .btn { padding: 0.75rem 2rem; font-size: 1rem; margin: 0 auto; }
 
-  .section__text__p2 {
-     font-size: 5vw; 
-     text-align: center; 
-    }
-
-  .btn { padding: 0.75rem 2rem; 
-    font-size: 1rem; 
-    margin: 0 auto; 
-  }
-
- /*About Section for Mobile and Tablet */
-@media (max-width: 900px) { 
-  
-  .section-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;        
-      justify-content: center;    
-      gap: 6vw;
-      width: 100%;               
-      margin: 0;                 
-      padding: 0;                 
-      box-sizing: border-box;     
-  }
-
-  .about-pic {
-      width: 90vw;                
-      max-width: 320px;
-      display: block;
-      margin-left: auto;          
-      margin-right: auto;          
-      height: auto;
-  }
-
-  .about-details-container {
-      flex: 1 1 100%;
-      text-align: center;
-      padding: 1rem;
-      box-sizing: border-box;
-  }
-
-  .text-container p {
-      font-size: 5vw;
-      line-height: 1.7;
-      text-align: center;
-  }
-}
-
-
-  .text-container p {
-     font-size: 3vw; 
-     line-height: 1.7; 
-     text-align: center;
-     }
-
-  /* ---------- Experience, Portfolio, Testimonials Grids ---------- */
+  /* Experience, Portfolio, Testimonials Grids */
   .experience-grid,
   .project-grid,
-  .testimonial-grid { grid-template-columns: 1fr !important;
-     gap: 1.5rem; 
-    }
-
-  .project-card { width: 90vw; 
-    max-width: 280px; 
-    margin: 0 auto; 
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
   }
-
-  /* ---------- Flip Cards ---------- */
-  .flip-card { width: 80vw; 
-    max-width: 280px; 
-    aspect-ratio: 1 / 1; 
-    margin: 0 auto; 
-  }
-
+  .project-card { width: 90vw; max-width: 280px; margin: 0 auto; }
+  .flip-card { width: 80vw; max-width: 280px; aspect-ratio: 1 / 1; margin: 0 auto; }
   .flip-card-inner,
   .flip-card-front,
   .flip-card-back { border-radius: 20px; }
 
-  /* ---------- Contact Section ---------- */
-  #contact {
-     padding: 3rem 1rem; 
-    }
-  .contact-info-upper-container { 
-    flex-direction: column; 
-    gap: 2rem; 
+  /* Contact */
+  #contact { padding: 3rem 1rem; }
+  .contact-info-upper-container { flex-direction: column; gap: 2rem; }
+
+  /* Footer */
+  footer { padding: 2rem 1rem; }
+}
+@media (max-width: 900px) {
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* better than 6vw for consistent spacing */
+    width: 100%;
+    margin: 0 auto; /* center horizontally */
+    padding: 0 1rem; /* small horizontal padding */
+    box-sizing: border-box;
   }
 
-  /* ---------- Footer ---------- */
-  footer { 
-    padding: 2rem 1rem; 
+  .about-pic {
+    width: 100%;
+    max-width: 320px; /* never exceed 320px */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* center */
   }
 
+  .about-details-container {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .text-container p {
+    font-size: 16px; /* use fixed font instead of vw */
+    line-height: 1.7;
+    text-align: center;
+    max-width: 100%; /* prevent overflow */
+    margin: 0 auto;
+  }
+}
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
