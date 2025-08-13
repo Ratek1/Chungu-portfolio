@@ -1,140 +1,149 @@
-/* mediaqueries.css */
-
-/* Mobile responsive styles */
+/* Mobile: max-width 600px */
 @media (max-width: 600px) {
-  
-  /* Top Greeting Banner */
+
+  /*Top Greeting Banner */
   .top-greeting-banner {
     padding: 12px 16px;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
+  #greetingText { font-size: 1rem;
+   }
   
-  #greetingText {
-    font-size: 1rem;
+  .social-links a { margin-left: 10px;
+   }
+
+  /* ---------- Navbar ---------- */
+  .navbar { 
+    padding: 12px 0; 
+    top: 50px; 
   }
-  
-  .social-links a {
-    margin-left: 10px;
-  }
-  
-  /* Navbar */
-  .navbar {
-    padding: 12px 0;
-    top: 50px;
-  }
-  
-  .nav-container {
+
+  .nav-container { 
     padding: 0 16px;
-  }
-  
-  /* Hide nav links and show hamburger */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
-    background: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    padding: 2rem 1.5rem;
-    border-radius: 0 0 12px 12px;
-    z-index: 1001;
-  }
+   }
 
-  .nav-links.active {
+  .nav-links { 
+    display: none; 
+    flex-direction: column;
+     gap: 1.5rem; 
+    }
+
+  .nav-links.active { 
     display: flex;
+   }
+
+  .hamburger-menu { 
+    display: block; 
   }
 
-  .hamburger-menu {
-    display: block;
-  }
-
-  /* Logo smaller on mobile */
-  .logo {
+  .logo { 
     font-size: 1.6rem;
-  }
-  
+   }
+
   /* Hero Section */
-  .hero {
-    padding: 2rem 1rem;
-    margin-top: 100px;
+  .hero { 
+    padding: 2rem 1rem; 
+    margin-top: 100px; 
   }
-  
-  .hero-container {
-    flex-direction: column;
-    gap: 2rem;
+
+  .hero-container { 
+    flex-direction: column; 
+    gap: 8vw;
+     width: 90vw;
+      justify-content: center; 
+    }
+  .section__pic-container {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
   }
-  
-  .section__pic-container img {
-    width: 220px;
-    height: 220px;
+  .section__pic-container img { width: 80vw; 
+    max-width: 280px; 
+    height: auto; 
+    margin: 0 auto; 
   }
-  
-  .title {
-    font-size: 2.5rem;
+
+  .title { font-size: 10vw; 
+    line-height: 1.1; 
+    text-align: center; 
   }
-  
-  .section__text__p1 {
-    font-size: 1.1rem;
-  }
-  
+  .section__text__p1 { 
+    font-size: 4vw; 
+    text-align: center;
+   }
+
   .section__text__p2 {
-    font-size: 1.2rem;
+     font-size: 5vw; 
+     text-align: center; 
+    }
+
+  .btn { padding: 0.75rem 2rem; 
+    font-size: 1rem; 
+    margin: 0 auto; 
   }
-  
-  /* Buttons smaller */
-  .btn {
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-  }
-  
-  /* About Section */
+
+  /* ---------- About Section ---------- */
   #about {
-    padding: 3rem 1rem;
-  }
-  
+     padding: 3rem 1rem; 
+    }
   .section-container {
-    flex-direction: column;
-    gap: 2rem;
+     flex-direction: column; 
+     gap: 8vw; 
+     justify-content: center; 
+    }
+  .about-pic { width: 80vw;
+     max-width: 280px; 
+     margin: 0 auto; 
+     height: auto; 
+    }
+  .about-details-container { 
+    flex: 1 1 100%; 
   }
-  
-  .about-pic {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-  }
-  
-  .about-details-container {
-    min-width: auto;
-  }
-  
-  /* Experience, Portfolio, Testimonials grids stack */
+
+  .text-container p {
+     font-size: 3vw; 
+     line-height: 1.7; 
+     text-align: center;
+     }
+
+  /* ---------- Experience, Portfolio, Testimonials Grids ---------- */
   .experience-grid,
   .project-grid,
-  .testimonial-grid {
-    grid-template-columns: 1fr !important;
+  .testimonial-grid { grid-template-columns: 1fr !important;
+     gap: 1.5rem; 
+    }
+
+  .project-card { width: 90vw; 
+    max-width: 280px; 
+    margin: 0 auto; 
   }
-  
-  /* Flip cards smaller height */
-  .flip-card {
-    height: 280px;
+
+  /* ---------- Flip Cards ---------- */
+  .flip-card { width: 80vw; 
+    max-width: 280px; 
+    aspect-ratio: 1 / 1; 
+    margin: 0 auto; 
   }
-  
-  /* Contact Section */
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back { border-radius: 20px; }
+
+  /* ---------- Contact Section ---------- */
   #contact {
-    padding: 3rem 1rem;
+     padding: 3rem 1rem; 
+    }
+  .contact-info-upper-container { 
+    flex-direction: column; 
+    gap: 2rem; 
   }
-  
-  .contact-info-upper-container {
-    flex-direction: column;
-    gap: 2rem;
+
+  /* ---------- Footer ---------- */
+  footer { 
+    padding: 2rem 1rem; 
   }
-  
-  /* Footer adjustments */
-  footer {
-    padding: 2rem 1rem;
-  }
+
 }
