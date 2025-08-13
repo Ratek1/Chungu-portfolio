@@ -80,8 +80,8 @@
   .section__pic-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* fills container, crops excess */
-    border-radius: 50%; /* keeps circular shape */
+    object-fit: cover;
+    border-radius: 50%; 
     display: block;
     margin: 0 auto;
 }
@@ -106,23 +106,44 @@
     margin: 0 auto; 
   }
 
-  /* ---------- About Section ---------- */
-  #about {
-     padding: 3rem 1rem; 
-    }
+ /*About Section for Mobile and Tablet */
+@media (max-width: 900px) { 
+  
   .section-container {
-     flex-direction: column; 
-     gap: 8vw; 
-     justify-content: center; 
-    }
-  .about-pic { width: 80vw;
-     max-width: 280px; 
-     margin: 0 auto; 
-     height: auto; 
-    }
-  .about-details-container { 
-    flex: 1 1 100%; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;        
+      justify-content: center;    
+      gap: 6vw;
+      width: 100%;               
+      margin: 0;                 
+      padding: 0;                 
+      box-sizing: border-box;     
   }
+
+  .about-pic {
+      width: 90vw;                
+      max-width: 320px;
+      display: block;
+      margin-left: auto;          
+      margin-right: auto;          
+      height: auto;
+  }
+
+  .about-details-container {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
+  }
+
+  .text-container p {
+      font-size: 3vw;
+      line-height: 1.7;
+      text-align: center;
+  }
+}
+
 
   .text-container p {
      font-size: 3vw; 
