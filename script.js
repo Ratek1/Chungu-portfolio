@@ -136,3 +136,11 @@ window.addEventListener('scroll', () => {
 backToTopImage.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+const hamburger = document.querySelector('.hamburger-menu');
+const navContainer = document.querySelector('.nav-container');
+
+hamburger.addEventListener('click', () => {
+  navContainer.classList.toggle('menu-open');
+});
