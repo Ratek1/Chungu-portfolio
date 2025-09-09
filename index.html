@@ -39,7 +39,8 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="connect-btn">Let's Connect</a></li>
+               <li><a href="./Connect-btn.html" class="connect-btn" target="_blank">Let's Connect</a></li>
+
             </ul>
             <div class="hamburger-menu" role="button" aria-label="Toggle navigation menu">
                 <div class="hamburger-icon" onclick="toggleMenu()">
@@ -118,6 +119,106 @@
         <img src="./assets/arrow.png" alt="Arrow to experience section" class="icon arrow" onclick="location.href='./#experience'" loading="lazy">
     </section>
 
+
+<!-- Services Section -->
+<section id="services">
+  <p class="section__text__p1">What I Offer</p>
+  <h1 class="title">Services</h1>
+  <p class="services_P" >I provide a wide range of professional services designed to help businesses and individuals thrive in the digital world.
+     My expertise includes modern website development using the latest technologies, WordPress site creation, creative graphic design, 
+     cybersecurity solutions, AI-driven automation, database management, networking, and more. Each service is tailored to deliver high-quality, 
+     innovative, and reliable solutions that meet your unique needs, helping you build a strong online presence, secure your digital assets, and leverage technology to achieve your goals.
+     Kalebwangu bro have your services delivered in time 24/7 mwetata.
+    </p>
+  <div class="service-container">
+
+    <!-- Service Card 1 -->
+    <div class="service-card">
+      <div class="service-header">
+        <span class="icon">💻</span>
+      </div>
+      <h3>Website Development</h3>
+      <ul>
+        <li>Custom responsive website design</li>
+        <li>E-commerce functionality</li>
+        <li>SEO-optimized development</li>
+      </ul>
+    </div>
+
+    <!-- Service Card 2 -->
+    <div class="service-card">
+      <div class="service-header">
+        <span class="icon">📢</span>
+      </div>
+      <h3>Digital Marketing</h3>
+      <ul>
+        <li>Search engine optimization (SEO)</li>
+        <li>PPC advertising campaigns</li>
+        <li>Email marketing strategies</li>
+      </ul>
+    </div>
+
+    <!-- Service Card 3 -->
+    <div class="service-card">
+      <div class="service-header">
+        <span class="icon">👥</span>
+      </div>
+      <h3>Social Media Management</h3>
+      <ul>
+        <li>Content creation & scheduling</li>
+        <li>Community engagement</li>
+        <li>Analytics & reporting</li>
+      </ul>
+    </div>
+
+    <!-- Hidden services -->
+    <div class="service-card hidden">
+      <div class="service-header">
+        <span class="icon">✍️</span>
+      </div>
+      <h3>Content Development</h3>
+      <ul>
+        <li>Blog & article writing</li>
+        <li>SEO content optimization</li>
+        <li>Content strategy planning</li>
+      </ul>
+    </div>
+
+    <div class="service-card hidden">
+      <div class="service-header">
+        <span class="icon">🤖</span>
+      </div>
+      <h3>AI Training</h3>
+      <ul>
+        <li>Machine learning basics</li>
+        <li>AI implementation strategies</li>
+        <li>Data analysis training</li>
+      </ul>
+    </div>
+
+    <div class="service-card hidden">
+      <div class="service-header">
+        <span class="icon">🎨</span>
+      </div>
+      <h3>Graphic Designing</h3>
+      <ul>
+        <li>Logo & brand identity design</li>
+        <li>Marketing materials creation</li>
+        <li>Social media graphics</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Show More / Less Button -->
+  <div class="btn-wrapper">
+    <button id="toggleBtn">Show More ⌄</button>
+  </div>
+</section>
+
+
+
+
     <!-- Experience Section with Flipping Cards -->
     <section id="experience">
         <p class="section__text__p1">Explore my</p>
@@ -125,10 +226,10 @@
         <div class="experience-grid">
             <div class="flip-card">
                 <div class="flip-card-inner">
-                    <div class="flip-card-front">
+                    <div class="flip-card-back">
                         <img src="./assets/f1.jpg" alt="Frontend Development Project" loading="lazy"/>
                     </div>
-                    <div class="flip-card-back">
+                    <div class="flip-card-front">
                         <h3>Frontend Development</h3>
                         <ul>
                             <li>HTML: Experienced</li>
@@ -144,10 +245,10 @@
             </div>
             <div class="flip-card">
                 <div class="flip-card-inner">
-                    <div class="flip-card-front">
+                    <div class="flip-card-back">
                         <img src="./assets/graphic-design.jpg" alt="Backend Development Project" loading="lazy" />
                     </div>
-                    <div class="flip-card-back">
+                    <div class="flip-card-front">
                         <h3>Backend Development</h3>
                         <ul>
                             <li>Postman: Basic</li>
@@ -161,10 +262,10 @@
             </div>
             <div class="flip-card">
                 <div class="flip-card-inner">
-                    <div class="flip-card-front">
+                    <div class="flip-card-back">
                         <img src="./assets/fpt.jpg" alt="Graphic design services" loading="lazy" />
                     </div>
-                    <div class="flip-card-back">
+                    <div class="flip-card-front">
                         <h3>Graphic Design</h3>
                         <ul>
                             <li>Adobe Photoshop: Intermediate</li>
@@ -190,7 +291,6 @@
                 <h2 class="project-title">Wordpress Websites</h2>
                 <p>Responsive e-commerce websites, Portifolios, Student management systems, Booking systems, Restaurant websites etc, featuring dynamic product filtering and a modern UI.</p>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">Github</button>
                     <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Ratek1', '_blank')">Explore</button>
 
                 </div>
@@ -200,7 +300,6 @@
                 <h2 class="project-title">Task Management App</h2>
                 <p>A Node.js-based task management application with Express.js backend and Material UI for a sleek frontend experience.</p>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">Github</button>
                     <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Ratek1', '_blank')">Explore</button>
 
                 </div>
@@ -210,7 +309,6 @@
                 <h2 class="project-title">Portfolio Website</h2>
                 <p>A personal portfolio website showcasing my skills and projects, built with a focus on accessibility and performance.</p>
                 <div class="btn-container">
-                   <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">Github</button>
                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Ratek1', '_blank')">Explore</button>
 
                 </div>
@@ -219,6 +317,191 @@
         <img src="./assets/arrow.png" alt="Arrow to testimonials section" class="icon arrow" onclick="location.href='./#testimonials'" loading="lazy">
     </section>
 
+    <!-- pricing-->
+<section id="pricing">
+  <p class="section__text__p1">My</p>
+  <h1 class="title">Pricing Plans</h1>
+
+  <div class="pricing-grid">
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front: Web Development -->
+        <div class="flip-card-front">
+          <h3>Basic Website</h3>
+          <p class="price">K 3500</p>
+          <ul>
+            <li>Up to 5 pages</li>
+            <li>Hosting/Domain
+                <p>1 month support</p>
+            </li>
+            <li>SSL certificate</li>
+            <li>Blog/portfolio </li>
+            <li>Template-based design</li>
+            <li>Contact form</li>
+          </ul>
+        </div>
+        <!-- Back: Graphic Design -->
+        <div class="flip-card-back">
+          <h3>Starter - Graphics</h3>
+          <p class="price">From $30</p>
+          <ul>
+            <li>1–2 simple designs (flyer/poster)</li>
+            <li>Basic edits</li>
+            <li>2 revisions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Basic Plan -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front: Web Development -->
+        <div class="flip-card-front">
+          <h3>Business Website</h3>
+          <p class="price">K 5000</p>
+          <ul>
+            <li>Up to 8 pages</li>
+            <li>SSL certificate</li>
+            <li>Hosting / Domain</li>
+            <li>Custom design & SEO setup</li>
+            <li>Contact form</li>
+            <li>3 months support</li>
+          </ul>
+        </div>
+        <!-- Back: Graphic Design -->
+        <div class="flip-card-back">
+          <h3>Basic – Graphics</h3>
+          <p class="price">From $70</p>
+          <ul>
+            <li>3–5 designs (social media, posters)</li>
+            <li>Custom graphics</li>
+            <li>Up to 4 revisions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front: Web Development -->
+        <div class="flip-card-front">
+          <h3>E-commerce</h3>
+          <p class="price">K 10 000</p>
+          <ul>
+            <li>Up to 10 pages </li>
+            <li>SEO + analytics integration</li>
+            <li>SSL certificates</li>
+            <li>Hosting and buying domain</li>
+            <li>Payment Gateways</li>
+            <li>3 months priority support</li>
+            <li>Fully custom design + speed optimization</li>
+          </ul>
+        </div>
+        <!-- Back: Graphic Design -->
+        <div class="flip-card-back">
+          <h3>Custom Websites</h3>
+          <p class="price">K15000+</p>
+          <ul>
+            <li>Client tailored</li>
+            <li>Pages depends</li>
+            <li>Hosting/Domain</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+     <!-- Premium Plan -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front: Web Development -->
+        <div class="flip-card-front">
+          <h3>E-commerce</h3>
+          <p class="price">K 10 000</p>
+          <ul>
+            <li>Up to 10 pages </li>
+            <li>SEO + analytics integration</li>
+            <li>SSL certificates</li>
+            <li>Hosting and buying domain</li>
+            <li>Payment Gateways</li>
+            <li>3 months priority support</li>
+            <li>Fully custom design + speed optimization</li>
+          </ul>
+        </div>
+        <!-- Back: Graphic Design -->
+        <div class="flip-card-back">
+          <h3>Custom Websites</h3>
+          <p class="price">K15000+</p>
+          <ul>
+            <li>Client tailored</li>
+            <li>Pages depends</li>
+            <li>Hosting/Domain</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--certifications-->
+<!-- Certifications Section -->
+<section id="certifications">
+  <p class="section__text__p1">Achievements</p>
+  <h1 class="title">Certifications</h1>
+  <div class="cert-container">
+
+    <!-- Card 1 -->
+    <div class="cert-card">
+      <div class="cert-img">
+        <img src="./assets/CHUNGU GLANCY 108227422.png" alt="Company Incorporation">
+        <span class="badge-icon">📑</span>
+      </div>
+      <div class="cert-body">
+        <h3>Graphic Design</h3>
+        <span class="date-badge">Dec 24, 2023</span>
+        <p>Skilled in designing graphics, digital art, and visual content with Photoshop</p>
+        <span class="bottom-badge">Udemy certificate</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="cert-card">
+      <div class="cert-img">
+        <img src="./assets/Chungu Glancy.pdf.png" alt="DIPP Startup Recognition">
+        <span class="badge-icon">⭐</span>
+      </div>
+      <div class="cert-body">
+        <h3>Wordpress and Elementor</h3>
+        <span class="date-badge">July 13, 2024</span>
+        <p>Skilled in creating modern, responsive websites with WordPress and Elementor.</p>
+        <span class="bottom-badge">📜 Udemy certificate </span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="cert-card">
+      <div class="cert-img">
+        <img src="./assets/fullstack web dev (1).png" alt="HTML5">
+        <span class="badge-icon">🏅</span>
+      </div>
+      <div class="cert-body">
+        <h3>HTML5, CSS3, JavaScript, Bootstrap & jQuery</h3>
+        <span class="date-badge">July 22, 2023</span>
+        <p>Acquired comprehensive front-end development skills using HTML5, CSS3, JavaScript, Bootstrap, and jQuery.</p>
+        <span class="bottom-badge">✅ Certified</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--certifications-->
+
+    
+    
     <!-- Testimonials Section -->
     <section id="testimonials">
         <p class="section__text__p1">What Others Say</p>
@@ -253,6 +536,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Footer -->
     <footer>

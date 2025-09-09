@@ -144,3 +144,20 @@ const navContainer = document.querySelector('.nav-container');
 hamburger.addEventListener('click', () => {
   navContainer.classList.toggle('menu-open');
 });
+
+
+
+const toggleBtn = document.getElementById("toggleBtn");
+const hiddenCards = document.querySelectorAll(".service-card.hidden");
+
+toggleBtn.addEventListener("click", () => {
+  hiddenCards.forEach(card => {
+    card.style.display = (card.style.display === "block") ? "none" : "block";
+  });
+
+  if (toggleBtn.textContent.includes("More")) {
+    toggleBtn.textContent = "Show Less ▲";
+  } else {
+    toggleBtn.textContent = "Show More ⌄";
+  }
+});

@@ -191,11 +191,16 @@ body::after {
 
 /* Connect button inside nav */
 .connect-btn {
-    background: #9c27b0;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: 600;
+  background: linear-gradient(to right, #9c27b0, #eccafa); /* gradient, not solid */
+  background-size: 200% 100%;   /* make it wider than button */
+  background-position: left center; /* starting point */
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-position 0.5s linear, color 0.3s ease;
 }
 
 .connect-btn:hover {
@@ -478,7 +483,7 @@ body::after {
 
 /* Experience Section */
 #experience {
-    padding: 6rem 1.5rem;
+    padding: 6rem 2rem;
     max-width: 1280px;
     margin: 0 auto;
     text-align: center;
@@ -497,7 +502,7 @@ body::after {
 }
 .flip-card {
     perspective: 1000px;
-    height: 380px;
+    max-height: 400px;
     margin-top: 50px;
 }
 
@@ -520,7 +525,7 @@ body::after {
 .flip-card-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     backface-visibility: hidden;
     border-radius: 30px;
     overflow: hidden;
@@ -839,4 +844,310 @@ footer p {
 #backToTop:hover {
   opacity: 0.8;
 }
+
+
+
+
+/* Pricing Section */
+#pricing {
+  padding: 6rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  color: #eee;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* Flip Cards - same principle as your experience */
+.flip-card {
+  background: transparent;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  perspective: 1000px; 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, 
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.flip-card-front h3,
+.flip-card-back h3 {
+  font-size: 1.4rem;
+  color: #26002c;
+ margin-top: 2rem;
+}
+.flip-card-front p{
+    margin-top: 1.8rem;
+}
+
+.flip-card-front .price,
+.flip-card-back .price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #e1bee7;
+  margin-bottom: 1rem;
+}
+
+.flip-card-front ul,
+.flip-card-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0; 
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem;               
+  font-size: 1.2rem;       
+  color: #ddd;
+}
+
+.flip-card-front ul li,
+.flip-card-back ul li {
+  text-align: center;      
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+
+
+/* Certifications Section */
+#certifications {
+  padding: 6rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff; /* keep text visible on purple background */
+}
+
+/* Container for multiple certificates */
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Individual certificate card */
+.cert-card {
+  background: rgba(255, 255, 255, 0.16); /* match glassmorphism style */
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #eee; /* text color */
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.5);
+}
+
+/* Certificate image */
+.cert-img {
+  position: relative;
+}
+
+.cert-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Badge in top corner */
+.badge-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #9c27b0; 
+  color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* Text area inside card */
+.cert-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.cert-body h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e1bee7; 
+  margin-bottom: 10px;
+}
+
+.date-badge {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 4px 12px;
+  border: 1px solid #9c27b0;
+  border-radius: 50px;
+  font-size: 13px;
+  color: #9c27b0;
+  background: rgba(255,255,255,0.12);
+}
+
+.bottom-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #9c27b0;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+
+/* Services Section */
+#services {
+  text-align: center;
+  padding: 50px 20px;
+  color: #eee;
+}
+
+.services_P {
+  font-size: 16px;             /* Comfortable reading size */
+  line-height: 1.8;            
+  color: #fff;                  
+  max-width: 850px;             
+  margin: 20px auto;            
+  text-align: justify;           
+  letter-spacing: 0.5px;        
+}
+
+
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* Glassmorphism service cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.16); /* semi-transparent */
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ddd;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient header like your buttons / connect btn */
+.service-header {
+  background: linear-gradient(to right, #9c27b0, #eccafa);
+  border-radius: 24px 24px 0 0;
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.service-header .icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Card title */
+.service-card h3 {
+  margin: 15px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e1bee7;
+}
+
+/* Features list */
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.service-card ul li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 20px;
+  color: #ddd;
+}
+
+.service-card ul li::before {
+  content: "•";
+  color: #9c27b0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Toggle button for extra services */
+.btn-wrapper {
+  margin-top: 2rem;
+}
+
+#toggleBtn {
+  background: linear-gradient(to right, #9c27b0, #eccafa);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+#toggleBtn:hover {
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
 

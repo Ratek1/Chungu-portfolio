@@ -114,3 +114,201 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+
+
+
+/* Tablet: medium screens */
+@media (max-width: 900px) {
+    #pricing {
+        padding: 4rem 1rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+    }
+
+    .flip-card {
+        height: 300px;
+    }
+
+    .flip-card-front h3,
+    .flip-card-back h3 {
+        font-size: 1.2rem;
+    }
+
+    .flip-card-front .price,
+    .flip-card-back .price {
+        font-size: 1.4rem;
+    }
+
+    .flip-card-front ul,
+    .flip-card-back ul {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile: small screens */
+@media (max-width: 600px) {
+    #pricing {
+        padding: 3rem 0.8rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+
+    .flip-card {
+        height: auto; 
+        min-height: 280px;
+    }
+
+    .flip-card-front h3,
+    .flip-card-back h3 {
+        font-size: 1.1rem;
+    }
+
+    .flip-card-front .price,
+    .flip-card-back .price {
+        font-size: 1.2rem;
+    }
+
+    .flip-card-front ul,
+    .flip-card-back ul {
+        font-size: 0.9rem;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        padding: 1rem;
+    }
+}
+
+/* Certifications Section Responsiveness */
+
+/* Default / Large screens */
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.cert-img {
+  position: relative;
+  width: 100%;
+}
+
+.cert-img img {
+  width: 100%;
+  height: auto;        /* maintain aspect ratio */
+  object-fit: contain; /* don't crop images */
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Badge */
+.badge-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #9c27b0;
+  color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* Text inside card */
+.cert-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.cert-body h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e1bee7;
+  margin-bottom: 10px;
+}
+
+.date-badge {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 4px 12px;
+  border: 1px solid #9c27b0;
+  border-radius: 50px;
+  font-size: 13px;
+  color: #9c27b0;
+  background: rgba(255,255,255,0.12);
+}
+
+.bottom-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #9c27b0;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .cert-img img {
+    max-height: 220px;
+    object-fit: cover;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  #certifications {
+    padding: 3rem 1rem;
+  }
+  .cert-img img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .cert-container {
+    grid-template-columns: 1fr; /* single column */
+  }
+  
+  .cert-card {
+    width: 100%;
+  }
+
+  .cert-img img {
+    width: 100%;       /* fill card width */
+    height: auto;      /* maintain aspect ratio */
+    max-height: none;  /* remove height limit */
+    object-fit: cover; /* fill space nicely */
+  }
+
+  .cert-body h3 {
+    font-size: 1.1rem;
+  }
+}
