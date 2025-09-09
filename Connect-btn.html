@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect With Us</title>
+<style>
+/* Reset and base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(90deg, #3a0ca3, #720026, #ae3ec9);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: -1;
+}
+
+/* Optional background image */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('./assets/body.jpg') center/cover no-repeat fixed;
+    z-index: -2;
+}
+
+/* Container */
+.container {
+    width: 95%;
+    max-width: 800px;
+    margin: 60px auto 40px;
+    background: rgba(255,255,255,0.16);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    overflow: hidden; /* prevent content overflow */
+}
+
+/* Headings */
+h2 {
+    color: #e1bee7;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* Contact section */
+.contact p, .contact a {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #ddd;
+    text-align: center;
+    word-wrap: break-word; /* prevent long links from overflowing */
+}
+.contact a {
+    color: #ba68c8;
+    text-decoration: none;
+}
+.contact a:hover { color: #9c27b0; }
+
+/* Poll section */
+.poll {
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.12);
+    box-shadow: inset 0 0 15px rgba(255,255,255,0.2);
+}
+.poll label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+input[type="submit"] {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    background: linear-gradient(to right, #9c27b0, #eccafa);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Result box */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.2);
+    text-align: center;
+    display: none;
+}
+.result h3 {
+    color: #e1bee7;
+    margin-bottom: 10px;
+}
+
+/* YouTube section */
+.youtube {
+    margin-top: 50px;
+    text-align: center;
+}
+.youtube iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* keeps video responsive */
+    border-radius: 15px;
+    border: none;
+}
+
+/* Responsive */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .container { width: 95%; padding: 25px; }
+    h2 { font-size: 1.6rem; }
+    .poll label { font-size: 0.95rem; }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .container { width: 95%; padding: 20px; margin: 50px auto 30px; }
+    h2 { font-size: 1.5rem; }
+    .poll label { font-size: 0.9rem; }
+    input[type="submit"] { width: 100%; padding: 12px; }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    h2 { font-size: 1.3rem; }
+    .poll label { font-size: 0.85rem; }
+    .youtube iframe { height: 180px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- Contact Info -->
+    <div class="contact">
+        <h2>Contact Details</h2>
+        <p>Email: <a href="mailto:glancechungu@gmail.com">glancechungu@gmail.com</a></p>
+        <p>Phone: +260777738064</p>
+        <p>Social Links: 
+            <a href="https://wa.me/260777738064" target="_blank">Whatsapp</a> | 
+            <a href="https://linkedin.com/in/example" target="_blank">LinkedIn</a>
+        </p>
+    </div>
+
+    <!-- Poll Section -->
+    <div class="poll">
+        <h2>What interests you the most?</h2>
+        <form id="pollForm">
+            <label><input type="radio" name="interest" value="Web Development"> Web Development</label>
+            <label><input type="radio" name="interest" value="Cybersecurity"> Cybersecurity</label>
+            <label><input type="radio" name="interest" value="Digital Marketing"> Digital Marketing</label>
+            <label><input type="radio" name="interest" value="AI Automation"> AI Automation</label>
+            <label><input type="radio" name="interest" value="Online Lessons"> Online Lessons</label>
+            <label><input type="radio" name="interest" value="Graphic Design"> Graphic Design</label>
+            <label><input type="radio" name="interest" value="Developing a website for you"> Developing a website for you</label>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <!-- YouTube Section -->
+    <div class="youtube">
+        <h2>Watch My YouTube Videos</h2>
+        <iframe src="https://www.youtube.com/embed/zSclcBWgbWs" 
+        title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+const form = document.getElementById('pollForm');
+const resultDiv = document.getElementById('result');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const selected = document.querySelector('input[name="interest"]:checked');
+    if(!selected){ alert('Please select an option.'); return; }
+    resultDiv.style.display = 'block';
+    resultDiv.innerHTML = `
+        <h3>Thank you for submitting!</h3>
+        <p><strong>Selected Interest:</strong> ${selected.value}</p>
+    `;
+});
+</script>
+</body>
+</html>
