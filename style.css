@@ -437,7 +437,7 @@ body::after {
   height: 380px !important;
   object-fit: cover !important;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4) !important;
-  margin-left: 4rem !important;
+  margin-left: 0 auto !important;
 }
 .about-details-container {
     flex: 1;
