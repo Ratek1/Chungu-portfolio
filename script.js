@@ -146,7 +146,7 @@ hamburger.addEventListener('click', () => {
 });
 
 
-
+//toggle services
 const toggleBtn = document.getElementById("toggleBtn");
 const hiddenCards = document.querySelectorAll(".service-card.hidden");
 
@@ -161,3 +161,5 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "Show More ⌄";
   }
 });
+
+//toggle pricing
